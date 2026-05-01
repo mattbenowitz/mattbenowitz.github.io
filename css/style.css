@@ -1,0 +1,68 @@
+/* Styling for dynamically generated option buttons */
+.option-btn {
+    background-color: #e0e0e0;
+    border: 2px solid transparent;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+    background-color: #d0d0d0;
+    border-color: var(--knicks-blue);
+}
+
+/* State Classes added by JS */
+.option-btn.correct {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+    transform: scale(1.02);
+}
+
+.option-btn.wrong {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+/* Progress Bar */
+#progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--knicks-orange);
+    transition: width 0.3s ease;
+}
+
+/* Header layout for stats and shot clock */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Shake Animation for wrong answers */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
