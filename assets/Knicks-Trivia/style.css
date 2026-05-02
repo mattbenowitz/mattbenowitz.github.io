@@ -1,0 +1,67 @@
+/* Color Variables */
+:root {
+  --knicks-blue: #006BB6;
+  --knicks-orange: #F58426;
+  --bg-color: #1a1a1a; /* Dark background to make the card pop */
+  --card-bg: #ffffff;
+  --text-dark: #333333;
+}
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* The Main Game Card */
+.game-container {
+    background-color: var(--card-bg);
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    text-align: center;
+    border-top: 8px solid var(--knicks-orange);
+    border-bottom: 8px solid var(--knicks-blue);
+}
+
+/* Utility class used by JS to hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* Buttons */
+.action-btn {
+    background-color: var(--knicks-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color: var(--knicks-orange);
+}
+
+/* Quiz Options Grid */
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
